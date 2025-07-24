@@ -1,8 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 import subprocess
-app = Flask(__name__, template_folder='Templates')
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='Templates')
 
 @app.route('/')
 def home():
@@ -23,7 +22,6 @@ def run_script():
         return jsonify({'output': result.stdout})
     except Exception as e:
         return jsonify({'error': str(e)})
-
 
 if __name__ == '__main__':
     app.run(debug=True)

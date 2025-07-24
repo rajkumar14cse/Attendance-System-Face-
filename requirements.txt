@@ -3,4 +3,3 @@ gunicorn
 opencv-python
 numpy
 pillow
-pip freeze > requirements.txt
